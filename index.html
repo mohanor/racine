@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGMA School</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .bg {
+            width: 21%;
+        }
+
+        .img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <table width="950" class="table" cellspacing=0>
+        <tr>
+            <th colspan="3" class="header">
+            </th>
+        </tr>
+        <tr>
+            <td rowspan="2" class="navBar">
+                <ul class="list">
+                    <li class="list__item item" id="list_1">
+                        <a class="link" href="#">Igma school</a>
+                        <ul class="childList" id="childList_1" style="height: 0px;">
+                            <li class="childList__item"><a href="index.html">Présentation de l'ecole</a></li>
+                            <li class="childList__item"><a href="president.html">Mot de président</a></li>
+                            <li class="childList__item"><a href="Methodepedagogique.html">Methode pédagogique</a></li>
+                        </ul>
+                    </li>
+                    <li class="list__item item" id="list_2">
+                        <a class="link" href="#">Formation Continue</a>
+                        <ul class="childList" id="childList_2" style="height: 0px;">
+                            <li class="childList__item"><a href="formationcontinue.html">Formation en cours d'emploi</a>
+                            </li>
+                            <li class="childList__item"><a href="formationanapec.html">Formations ANAPEC</a></li>
+                        </ul>
+                    </li>
+                    <li class="list__item"><a class="link" href="programmes.html">Programmes</a></li>
+                    <li class="list__item"><a class="link" href="langageetudies.html">Langages étudies</a></li>
+                    <li class="list__item" id="insc"><a class="link" href="#">Inscription</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top: 20px;padding-left: 20px;height: 430px;
+            vertical-align: text-bottom;" id="main">
+                <div class="grid">
+                    <div>
+                        Depuis la création de l’école IGMA School en 1994, notre objectif a toujours été de convertir
+                        les
+                        formations dispensées en une productivité effective et de qualité.
+
+                        Avec cette devise, nous sommes passés d’une reconnaissance locale à une confirmation nationale.
+
+                        Aujourd’hui notre objectif est d’affermir la reconnaissance internationale de nos formations :La
+                        Licence
+                        Professionnelle et le Master Européens en sont bien un exemple.
+                    </div>
+                    <div>
+                        <img src="./img/pres_photo.png">
+                    </div>
+                </div>
+                Notre souhait est d’asseoir une production de compétences reconnues au niveau international.
+                <strong>
+                    <div class="creation">
+
+                        <span>création</span>
+                        <span class="redColor">1994</span>
+
+                        <span>Formateurs</span>
+                        <span class="redColor">40</span>
+
+                        <span>Capacité d'accueil</span>
+                        <span class="redColor">200 places pédagogiques</span>
+
+                        <span>Salles de cours</span>
+                        <span class="redColor">8 salles théoriques + 3 salles de travaux pratiques + 40 PC + Réseau et
+                            Connexion haut débit….</span>
+
+                        <span>Buvette </span>
+                        <span class="redColor">1</span>
+
+                        <span>Bibliothèque</span>
+                        <span class="redColor">1</span>
+
+                    </div>
+                </strong>
+                Nos diplômes sont reconnus équivalents et co-signés par le Ministère de tutelle, et ce depuis
+                l’instauration du système d’accréditation.
+
+                L’école IGMA School a été sélectionnée par le projet Meda 2 (accompagnement APC de 40 écoles parmi
+                toutes les écoles accréditées en formation initiale) et (de 20 écoles parmis toutes les écoles en
+                formation continue) et a béneficié d’un suivi pédagogique et des formations de perfectionnement pour ses
+                cadres.
+                <div class="img__div">
+                    <div class="bg">
+                        <img src="./img/flyer.jpg" alt="" class="img">
+                        <div class="colorBlack" onclick="currentSlide(0)"></div>
+                    </div>
+                    <div class="bg">
+                        <img src="./img/flyer_1.jpg" alt="" class="img img2">
+                        <div class="colorBlack" onclick="currentSlide(1)"></div>
+                    </div>
+                    <div class="bg">
+                        <img src="./img/flyer_2.jpg" alt="" class="img">
+                        <div class="colorBlack" onclick="currentSlide(2)"></div>
+                    </div>
+                    <div class="bg">
+                        <img src="./img/icdl.jpg" alt="" class="img">
+                        <div class="colorBlack" onclick="currentSlide(3)"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="footer">
+                Adresse : BD. Mohamed V, résid. Al Wafaa, appt.5-6 - 24000 - El Jadida</br>
+                Tel : +212(0)523.354.211 Fax : +212(0)523.354.211</br>
+                Email : igmaschool@gmail.com
+            </td>
+        </tr>
+    </table>
+    <div class="pa" id="p" style="display: none;">
+        <span style="position: absolute;right: 4%;top: 7%;cursor: pointer;" id="close"><img
+                src="./img/icons/close.png"></span>
+        <span style="position: absolute;top: 48%;cursor: pointer;" onclick="currentSlideplus(-1)"><img
+                src="./img/icons/back.png"></span>
+        <div class="sous-pa">
+            <img src="" id="slide">
+        </div>
+        <span style="position: absolute;top: 47%;right: 4%;cursor: pointer;" onclick="currentSlideplus(1)"><img
+                src="./img/icons/next (1).png"></span>
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+        const img = document.getElementsByClassName('img');
+        const slide = document.getElementById('slide');
+        const p = document.getElementById('p');
+        const body = document.getElementById('body');
+        const close = document.getElementById('close');
+        var plus;
+        function currentSlideplus(n) {
+            plus += n;
+            if (plus > 3) plus = 0;
+            if (plus < 0) plus = 3;
+            currentSlide(plus);
+        }
+        function currentSlide(params) {
+            plus = params;
+            p.style.display = "block";
+            slide.src = img[params].src;
+            body.style.overflow = "hidden";
+        }
+        close.onclick = function () {
+            p.style.display = "none";
+            body.style.overflow = "auto";
+        }
+    </script>
+</body>
+
+</html>
